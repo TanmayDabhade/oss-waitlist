@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 
 // A dedicated Waitlist page that matches the light theme used across the site
 // • No direct `process.env` access on the client
@@ -311,12 +312,12 @@ export default function WaitlistPage() {
                 >
                   {submitting ? "Submitting…" : mode === "live" ? "Join waitlist" : "Join waitlist (demo)"}
                 </button>
-                <a
+                <Link
                   href="/"
                   className="h-11 rounded-xl border border-black px-5 text-sm font-semibold hover:bg-black hover:text-white"
                 >
                   Back home
-                </a>
+                </Link>
               </div>
 
               <p className="text-xs text-black/60">No spam. Unsubscribe anytime.</p>
