@@ -121,9 +121,13 @@ export default function WaitlistPage() {
         await new Promise((res) => setTimeout(res, 700));
         setDone("ok");
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
-      setError(err?.message || "Something went wrong.");
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Something went wrong.");
+      }
       setDone("fail");
     } finally {
       setSubmitting(false);
