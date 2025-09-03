@@ -36,7 +36,7 @@ export default function Home() {
 
           <div className="mx-auto flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link 
-              href="#waitlist"
+              href="/waitlist"
               className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:translate-y-0.5 active:translate-y-1"
             >
               Join the waitlist
