@@ -178,8 +178,8 @@ export default function WaitlistPage() {
               <h2 className="text-xl font-semibold sm:text-2xl">You’re on the list! 🎉</h2>
               <p className="text-sm text-black/70">We’ll email you when your invite is ready. Meanwhile, say hi on the repo and star updates.</p>
               <div className="mt-2 flex items-center justify-center gap-3">
-                <a href="https://github.com/openboard" className="rounded-full border border-black px-4 py-2 text-sm font-semibold hover:bg-black hover:text-white">GitHub</a>
-                <a href="/projects" className="rounded-full border border-black px-4 py-2 text-sm font-semibold hover:bg-black hover:text-white">Explore projects</a>
+                <Link href="https://github.com/openboard" className="rounded-full border border-black px-4 py-2 text-sm font-semibold hover:bg-black hover:text-white">GitHub</Link >
+                <Link href="/projects" className="rounded-full border border-black px-4 py-2 text-sm font-semibold hover:bg-black hover:text-white">Explore projects</Link >
               </div>
             </div>
           ) : (
@@ -334,9 +334,9 @@ export default function WaitlistPage() {
             <span className="text-sm">© {new Date().getFullYear()} OpenBoard</span>
           </div>
           <div className="flex items-center gap-6 text-sm">
-            <a className="hover:opacity-70" href="#">Privacy</a>
-            <a className="hover:opacity-70" href="#">Terms</a>
-            <a className="hover:opacity-70" href="#">Contact</a>
+            <Link className="hover:opacity-70" href="#">Privacy</Link >
+            <Link className="hover:opacity-70" href="#">Terms</Link >
+            <Link className="hover:opacity-70" href="#">Contact</Link >
           </div>
         </div>
       </footer>

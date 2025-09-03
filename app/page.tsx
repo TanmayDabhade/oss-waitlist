@@ -5,6 +5,7 @@ import { FeatureCard } from "@/components/FeatureCard";
 import { IconSpark } from "@/components/icons/IconSpark";
 import { IconLink } from "@/components/icons/IconLink";
 import { IconTrack } from "@/components/icons/IconTrack";
+import Link from "next/link";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -34,18 +35,18 @@ export default function Home() {
           </p>
 
           <div className="mx-auto flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a
+            <Link 
               href="#waitlist"
               className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:translate-y-0.5 active:translate-y-1"
             >
               Join the waitlist
-            </a>
-            <a
+            </Link>
+            <Link 
               href="#features"
               className="inline-flex items-center justify-center rounded-full border border-black px-6 py-3 text-sm font-semibold transition hover:bg-black hover:text-white"
             >
               Explore features
-            </a>
+            </Link>
           </div>
 
           <div className="mx-auto mt-6 grid grid-cols-2 items-center gap-4 opacity-80 sm:grid-cols-4">
