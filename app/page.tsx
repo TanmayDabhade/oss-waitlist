@@ -31,7 +31,7 @@ export default function Home() {
             Find projects. Rally contributors. <span className="underline decoration-black/20">Ship faster.</span>
           </h1>
           <p className="mx-auto max-w-2xl text-pretty text-base text-black/70 md:text-lg">
-            OpenBoard is a lightweight hub for maintainers and makers to post projects, match with contributors, and track progress—without the overhead.
+            Forged is a lightweight hub for maintainers and makers to post projects, match with contributors, and track progress—without the overhead.
           </p>
 
           <div className="mx-auto flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -64,7 +64,7 @@ export default function Home() {
         <div className="absolute inset-x-4 -z-10 top-6 rounded-3xl border border-black/10" />
 
         <div className="mx-auto grid max-w-3xl place-items-center gap-3 text-center">
-          <p className="mx-auto w-fit rounded-full border border-black/20 px-3 py-1 text-xs uppercase tracking-widest">Why OpenBoard</p>
+          <p className="mx-auto w-fit rounded-full border border-black/20 px-3 py-1 text-xs uppercase tracking-widest">Why Forged</p>
           <h2 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">Purpose-built to keep momentum</h2>
           <p className="text-black/70">
             Post crisp project cards, match with aligned contributors, and keep progress visible without bloated PM tools.

@@ -6,7 +6,7 @@ import Link from "next/link";
 // • No direct `process.env` access on the client
 // • Supports demo vs. live modes:
 //    - default: demo (simulated submit)
-//    - force live: set <html data-openboard-mode="live"> OR add ?mode=live to the URL
+//    - force live: set <html data-Forged-mode="live"> OR add ?mode=live to the URL
 // • Honeypot + submit-time threshold for basic spam protection
 // • Character counter, client-side validation, and clear success/failure states
 
@@ -32,7 +32,7 @@ function getInitialMode(): Mode {
   }
   // 2) HTML attribute
   if (typeof document !== "undefined") {
-    const attr = document.documentElement.getAttribute("data-openboard-mode");
+    const attr = document.documentElement.getAttribute("data-Forged-mode");
     if (attr === "live") return "live";
   }
   return "demo";
@@ -154,7 +154,7 @@ export default function WaitlistPage() {
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
           <div className="flex items-center gap-2">
             <Logo />
-            <span className="text-lg font-semibold tracking-tight">OpenBoard</span>
+            <span className="text-lg font-semibold tracking-tight">Forged</span>
           </div>
           <div className="flex items-center gap-2 text-xs">
             <ModePill mode={mode} onToggle={() => setMode((m) => (m === "demo" ? "live" : "demo"))} />
@@ -167,7 +167,7 @@ export default function WaitlistPage() {
         <div className="absolute inset-x-4 -z-10 top-6 rounded-3xl border border-black/10" />
         <div className="grid place-items-center gap-3 text-center">
           <p className="mx-auto w-fit rounded-full border border-black/20 px-3 py-1 text-xs uppercase tracking-widest">Early access</p>
-          <h1 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">Join the OpenBoard waitlist</h1>
+          <h1 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">Join the Forged waitlist</h1>
           <p className="max-w-2xl text-sm text-black/70">
             Be first to try the project-matching hub for maintainers and contributors. We’ll invite batches as we ship milestones.
           </p>
@@ -182,7 +182,7 @@ export default function WaitlistPage() {
               <h2 className="text-xl font-semibold sm:text-2xl">You’re on the list! 🎉</h2>
               <p className="text-sm text-black/70">We’ll email you when your invite is ready. Meanwhile, say hi on the repo and star updates.</p>
               <div className="mt-2 flex items-center justify-center gap-3">
-                <Link href="https://github.com/openboard" className="rounded-full border border-black px-4 py-2 text-sm font-semibold hover:bg-black hover:text-white">GitHub</Link >
+                <Link href="https://github.com/Forged" className="rounded-full border border-black px-4 py-2 text-sm font-semibold hover:bg-black hover:text-white">GitHub</Link >
                 <Link href="/projects" className="rounded-full border border-black px-4 py-2 text-sm font-semibold hover:bg-black hover:text-white">Explore projects</Link >
               </div>
             </div>
@@ -296,7 +296,7 @@ export default function WaitlistPage() {
 
               <label className="mt-1 inline-flex items-center gap-2 text-sm">
                 <input type="checkbox" checked={agree} onChange={() => setAgree((v) => !v)} />
-                I agree to receive OpenBoard emails and accept the terms.
+                I agree to receive Forged emails and accept the terms.
               </label>
 
               {error && (
@@ -335,7 +335,7 @@ export default function WaitlistPage() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-10 sm:flex-row">
           <div className="flex items-center gap-2">
             <Logo size={18} />
-            <span className="text-sm">© {new Date().getFullYear()} OpenBoard</span>
+            <span className="text-sm">© {new Date().getFullYear()} Forged</span>
           </div>
           <div className="flex items-center gap-6 text-sm">
             <Link className="hover:opacity-70" href="#">Privacy</Link >
